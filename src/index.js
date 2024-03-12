@@ -3,9 +3,14 @@ import DownCaret from "./menu-down.svg";
 
 /*
   Critical:
-  - Check getSelectedOption
+  - caret not showing
+
   Optional:
+  - Change text size
+  - Change text colour
+  - Change drop down element background color
   - Add a default option and "defaultOption" function
+  - Change 
   
 */
 

@@ -3,7 +3,7 @@
 A configurable Dropdown component alternative
 
 
-The library is available as an [add link here](https://addlinkhere).
+This library is currently private.
 
 ## Installation
 
@@ -29,12 +29,12 @@ Add the options available to the user - a display text and stored value for each
 newDropDown.setList(
 [
   {
-    itemText: "List item number 1",
-    itemValue: 1
+    text: "List item number 1",
+    value: 1
   },
   {
-    itemText: "List item number 2",
-    itemValue: 2
+    text: "List item number 2",
+    value: 2
   }
 ]
 ```
@@ -58,9 +58,7 @@ parentNode.appendChild(newDOM);
 
 Get an object containing the selected option text and value
 ```js
-const selection = newDropDown.getSelectedOption()
-const selectedText = selection.text
-const selectedValue = selection.value
+const { text, value } = newDropDown.getSelectedOption();
 ```
 
 ### Usage of "change" event
@@ -106,14 +104,12 @@ const newDOM = newDropDown.generateDOM();
 selectProjContainer.appendChild(newDOM);
 ```
 
-Event listener attached to the 
+Event listener:
 ```js
 newDOM.addEventListener(
   "change",
   () => {
-    const selection = newDropDown.getSelectedOption()
-    const selectedText = selection.text
-    const selectedValue = selection.value
+    const { text, value } = newDropDown.getSelectedOption();
   }
 )
 ```
