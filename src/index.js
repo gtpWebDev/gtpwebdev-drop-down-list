@@ -94,8 +94,7 @@ function createDropDown() {
     topBar.appendChild(topBarText);
 
     topBarCaret.setAttribute("id","selector-caret");
-    topBarCaret.setAttribute("src","");
-    // topBarCaret.setAttribute("src",DownCaret);
+    topBarCaret.setAttribute("src",DownCaret);
     topBar.appendChild(topBarCaret);
    
     container.appendChild(topBar);

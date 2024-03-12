@@ -61,16 +61,14 @@ Get an object containing the selected option text and value
 const { text, value } = newDropDown.getSelectedOption();
 ```
 
-### Usage of "change" event
+### Collecting the text and value of the selection option
 
-The selected text and value can be collected using an event listener for the "change" event, which is triggered by a selection from the drop down list.
+A "change" event is dispatched when an item on the drop down list is selected.
 ```js
 newDOM.addEventListener(
   "change",
   () => {
-    const selection = newDropDown.getSelectedOption()
-    const selectedText = selection.text
-    const selectedValue = selection.value
+    const { text, value } = newDropDown.getSelectedOption();
   }
 )
 ```
