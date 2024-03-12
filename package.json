@@ -1,14 +1,14 @@
 {
-  "name": "npm-package-template",
+  "name": "gtpwebdev-drop-down-list",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Drop down list",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
-  "keywords": [],
+  "keywords": ["dropdown","list"],
   "author": "Glen Pearson",
   "license": "ISC",
   "dependencies": {
