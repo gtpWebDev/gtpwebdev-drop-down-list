@@ -54,25 +54,49 @@ const newDOM = newDropDown.generateDOM();
 parentNode.appendChild(newDOM);
 ```
 
+### getSelectedOption()
+
+Get an object containing the selected option text and value
+```js
+const selection = newDropDown.getSelectedOption()
+const selectedText = selection.text
+const selectedValue = selection.value
+```
+
+### Usage of "change" event
+
+The selected text and value can be collected using an event listener for the "change" event, which is triggered by a selection from the drop down list.
+```js
+newDOM.addEventListener(
+  "change",
+  () => {
+    const selection = newDropDown.getSelectedOption()
+    const selectedText = selection.text
+    const selectedValue = selection.value
+  }
+)
+```
+
+
 ### An example
 
-```javascript
+```js
 import createDropDown from "gtpwebdev-dropdown-list4";
 
 onst newDropDown = createDropDown();
 newDropDown.setList(
   [
     {
-      itemText: "Odin 6: To Do List",
-      itemValue: 1
+      text: "First option",
+      value: 1
     },
     {
-      itemText: "DIY Jobs",
-      itemValue: 2
+      text: "A second option",
+      value: 2
     },
     {
-      itemText: "4th item that is very very very very long indeed",
-      itemValue: 5
+      text: "Another option",
+      value: 5
     },
   ]
 );
@@ -80,4 +104,16 @@ newDropDown.setBarBackground("#ffdb4f");
 const newDOM = newDropDown.generateDOM();
 
 selectProjContainer.appendChild(newDOM);
+```
+
+Event listener attached to the 
+```js
+newDOM.addEventListener(
+  "change",
+  () => {
+    const selection = newDropDown.getSelectedOption()
+    const selectedText = selection.text
+    const selectedValue = selection.value
+  }
+)
 ```

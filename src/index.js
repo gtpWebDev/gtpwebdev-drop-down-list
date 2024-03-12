@@ -21,7 +21,11 @@ function createDropDown() {
   const topBarText = document.createElement("p");
   const topBarCaret = document.createElement("img");
 
-  const getSelectedOption = () => selectedValue;
+  // The "change" event will be dispatched on an option being changed
+  // This event can be listened for to colelct the selected value
+  const changeEvent = new Event("change", {bubbles: true})
+
+  const getSelectedOption = () => selectedOption;
 
   const setOptions = (options) => optionsArray = options;
 
@@ -45,9 +49,9 @@ function createDropDown() {
       const option = document.createElement("div");
       option.setAttribute("class", "selector-drop-down-item");
       option.setAttribute("style",`top: calc(${index+1}*var(--drop-down-height))`);
-      option.setAttribute("data-selected-option-text",element.itemText);
-      option.setAttribute("data-selected-option-value",element.itemValue);
-      option.textContent = element.itemText;
+      option.setAttribute("data-selected-option-text",element.text);
+      option.setAttribute("data-selected-option-value",element.value);
+      option.textContent = element.text;
 
       option.addEventListener("click",() => {
         selectedOption = {
@@ -56,6 +60,7 @@ function createDropDown() {
         }
         topBarText.textContent = selectedOption.text;
         updateOptionsVisibility(false);
+        option.dispatchEvent(changeEvent)
       });
       
       optionsContainer.appendChild(option);
