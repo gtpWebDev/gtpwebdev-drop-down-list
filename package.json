@@ -8,7 +8,10 @@
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
-  "keywords": ["dropdown","list"],
+  "keywords": [
+    "dropdown",
+    "list"
+  ],
   "author": "Glen Pearson",
   "license": "ISC",
   "dependencies": {
@@ -17,6 +20,9 @@
   },
   "devDependencies": {
     "css-loader": "^6.10.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "3.2.5",
     "style-loader": "^3.3.4",
     "webpack-dev-server": "^5.0.2",
     "webpack-merge": "^5.10.0"
